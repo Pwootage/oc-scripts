@@ -18,11 +18,11 @@ setmetatable(Life, {
 function Life.new()
     local self = setmetatable({}, Life)
     self.map = {}
-    self.init(false)
+    self.initMap(false)
     return self
 end
 
-function Life:init(random)
+function Life:initMap(random)
     random = random or false
     for x = 1, 48 do
         self.map[x] = {}

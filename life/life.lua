@@ -61,16 +61,16 @@ function Life:update()
         for z = 1, 48 do
             local me = bit32.band(Life.LAST, self.map[x][z])
             local neighbors = 0
-            if self.check(wrap(x - 1), z) then neighbors = neighbors + 1 end
-            if self.check(wrap(x + 1), z) then neighbors = neighbors + 1 end
-            if self.check(x, wrap(z - 1)) then neighbors = neighbors + 1 end
-            if self.check(x, wrap(z + 1)) then neighbors = neighbors + 1 end
+            if self:check(wrap(x - 1), z) then neighbors = neighbors + 1 end
+            if self:check(wrap(x + 1), z) then neighbors = neighbors + 1 end
+            if self:check(x, wrap(z - 1)) then neighbors = neighbors + 1 end
+            if self:check(x, wrap(z + 1)) then neighbors = neighbors + 1 end
             if neighbors == 2 then
                 --BORN/live
                 self.map[x][z] = bit32.bor(Life.CURR, self.map[x][z])
             elseif neighbors == 3 then
                 --Same as before
-                if check(x, z) then
+                if self:check(x, z) then
                     self.map[x][z] = bit32.bor(Life.CURR, self.map[x][z])
                 end
             else

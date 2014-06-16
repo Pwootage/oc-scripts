@@ -14,4 +14,9 @@ while true do
     gol:update()
     gol:renderHolo(holo)
     os.sleep(0.1)
+
+    if ticks > 500 then
+        ticks = 0
+        gol:initMap(true)
+    end
 end

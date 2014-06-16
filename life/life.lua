@@ -47,7 +47,7 @@ local function wrap(num)
 end
 
 function Life:check(x, z)
-    return bit32.band(Life.LAST, self.map[x][wrap(z + z1)]) > 0
+    return bit32.band(Life.LAST, self.map[x][z]) > 0
 end
 
 function Life:update()

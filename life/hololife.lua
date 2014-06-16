@@ -6,7 +6,7 @@ local life = require("life")
 local holo = component.hologram
 
 local gol = life.Life()
-gol.initMap(true)
+gol:initMap(true)
 
 local ticks = 0;
 while true do

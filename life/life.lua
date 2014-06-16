@@ -18,7 +18,7 @@ setmetatable(Life, {
 function Life.new()
     local self = setmetatable({}, Life)
     self.map = {}
-    self.initMap(false)
+    --self:initMap(false)
     return self
 end
 

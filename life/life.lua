@@ -89,4 +89,6 @@ function Life:renderHolo(holo)
 end
 
 
-return Life
+local life = {}
+life.Life = Life
+return life

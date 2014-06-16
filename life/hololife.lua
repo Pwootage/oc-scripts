@@ -3,7 +3,7 @@
 local component = require("component")
 local Life = require("life")
 
-local holo = component.holo
+local holo = component.hologram
 
 local gol = new Life()
 gol.init(true)

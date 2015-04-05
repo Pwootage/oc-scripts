@@ -80,12 +80,24 @@ function Life:update()
     end
 end
 
-function Life:renderHolo(holo)
+function Life:renderHolo(holo, singleRow)
+    singleRow = singleRow or false
     for x = 1, 48 do
         for z = 1, 48 do
-            holo.set(x,z, self.map[x][z])
+            if singleRow then
+                if self:check(x, z) then
+                    holo.set(x, z, 1)
+                else
+                    holo.set(x, z, 0)
+                end
+            else
+                holo.set(x, z, self.map[x][z])
+            end
         end
     end
+end
+
+function Life:renderScreen(screen)
 end
 
 

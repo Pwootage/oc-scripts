@@ -12,7 +12,7 @@ local ticks = 0;
 while true do
     ticks = ticks + 1
     gol:update()
-    gol:renderHolo(holo)
+    gol:renderHolo(holo, true)
     os.sleep(0.1)
 
     if ticks > 500 then

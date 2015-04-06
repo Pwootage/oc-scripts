@@ -27,8 +27,8 @@ end
 local out = io.open(outFileName, "w")
 
 out:write("-- Auto-generated bindings for component '" .. compName .. "'\n")
-out:write("component = component or {}\n")
-out:write(compName .. " = " .. compName .. " or {}\n")
+out:write("component = {}\n")
+out:write(compName .. " = {}\n")
 out:write("component." .. compName .. " = " .. compName .. "\n")
 out:write(compName .. ".type = \"" .. c.type .. "\"\n")
 out:write(compName .. ".address = \"" .. c.address:gsub("[^-]", "0") .. "\"\n")

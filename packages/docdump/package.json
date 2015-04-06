@@ -1,0 +1,14 @@
+{
+  "name": "docdump",
+  "version": "1.0.0",
+  "files": [
+    "package.json",
+
+    "docdump.lua"
+  ],
+  "links": {
+    "/usr/bin/docdump.lua": "docdump.lua"
+  },
+  "install": {
+  }
+}

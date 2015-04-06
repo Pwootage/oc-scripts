@@ -1,0 +1,14 @@
+{
+  "name": "numpad",
+  "version": "1.0.0",
+  "files": [
+    "package.json",
+
+    "numpad.lua"
+  ],
+  "links": {
+    "/usr/bin/numpad.lua": "numpad.lua"
+  },
+  "install": {
+  }
+}
